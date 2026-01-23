@@ -1,0 +1,214 @@
+[33mcommit 84ba0552477abda026d56b8e2101c83a616dedc6[m
+Author: Asraful87 <asraful.pathway@gmail.com>
+Date:   Fri Jan 23 18:59:51 2026 +0600
+
+    Intital
+
+[1mdiff --git a/.env b/.env[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4b8462a[m
+[1m--- /dev/null[m
+[1m+++ b/.env[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mDISCORD_TOKEN= MTQ2NDE4Mzc4ODI4NzU2MTgxMg.Ga3Qls.IpaVdXE_O5cfGqcor33s4kX5t__9gCKHRkHcI8[m
+[1mdiff --git a/.env.example b/.env.example[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ae4a248[m
+[1m--- /dev/null[m
+[1m+++ b/.env.example[m
+[36m@@ -0,0 +1,5 @@[m
+[32m+[m[32m# Discord Bot Token (get from https://discord.com/developers/applications)[m
+[32m+[m[32mDISCORD_TOKEN=sdfghjk[m
+[32m+[m
+[32m+[m[32m# Optional: Set to 1 to enable debug logging[m
+[32m+[m[32mDEBUG=0[m
+\ No newline at end of file[m
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..86ff318[m
+[1m--- /dev/null[m
+[1m+++ b/README.md[m
+[36m@@ -0,0 +1,109 @@[m
+[32m+[m[32m# Discord Moderation Bot[m
+[32m+[m
+[32m+[m[32mA comprehensive Discord moderation bot with advanced features for server management.[m
+[32m+[m
+[32m+[m[32m## Features[m
+[32m+[m
+[32m+[m[32m- **Moderation Commands**: Kick, ban, warn, timeout, and mute members[m
+[32m+[m[32m- **Channel Management**: Create, delete, and configure channels[m
+[32m+[m[32m- **Message Utilities**: Bulk delete messages and message management[m
+[32m+[m[32m- **Role Management**: Assign, remove, and manage roles[m
+[32m+[m[32m- **Utilities**: Server info, user info, ping, and more[m
+[32m+[m[32m- **Setup Wizard**: Easy configuration for new servers[m
+[32m+[m
+[32m+[m[32m## Installation[m
+[32m+[m
+[32m+[m[32m1. Clone the repository:[m
+[32m+[m[32m```bash[m
+[32m+[m[32mgit clone <repository-url>[m
+[32m+[m[32mcd discord-mod-bot[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m2. Install dependencies:[m
+[32m+[m[32m```bash[m
+[32m+[m[32mpip install -r requirements.txt[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m3. Configure the bot:[m
+[32m+[m[32m   - Copy `.env.example` to `.env`[m
+[32m+[m[32m   - Add your Discord bot token to `.env`[m
+[32m+[m[32m   - Modify `config.yaml` to suit your needs[m
+[32m+[m
+[32m+[m[32m4. Run the bot:[m
+[32m+[m[32m```bash[m
+[32m+[m[32mpython bot.py[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m## Configuration[m
+[32m+[m
+[32m+[m[32m### Environment Variables (.env)[m
+[32m+[m[32m- `DISCORD_TOKEN`: Your Discord bot token from the Discord Developer Portal[m
+[32m+[m
+[32m+[m[32m### config.yaml[m
+[32m+[m[32m- `bot.prefix`: Command prefix (default: !)[m
+[32m+[m[32m- `moderation`: Moderation settings and auto-actions[m
+[32m+[m[32m- `permissions`: Role-based permissions[m
+[32m+[m[32m- `features`: Channel configurations[m
+[32m+[m
+[32m+[m[32m## Commands[m
+[32m+[m
+[32m+[m[32m### Moderation[m
+[32m+[m[32m- `!kick <member> [reason]` - Kick a member[m
+[32m+[m[32m- `!ban <member> [reason]` - Ban a member[m
+[32m+[m[32m- `!unban <user_id>` - Unban a user[m
+[32m+[m[32m- `!warn <member> [reason]` - Warn a member[m
+[32m+[m[32m- `!warnings <member>` - View member warnings[m
+[32m+[m[32m- `!timeout <member> <duration> [reason]` - Timeout a member[m
+[32m+[m[32m- `!untimeout <member>` - Remove timeout from a member[m
+[32m+[m
+[32m+[m[32m### Messages[m
+[32m+[m[32m- `!purge <amount>` - Delete multiple messages[m
+[32m+[m[32m- `!clear <amount> [member]` - Clear messages from a user[m
+[32m+[m
+[32m+[m[32m### Channels[m
+[32m+[m[32m- `!createchannel <name> [type]` - Create a new channel[m
+[32m+[m[32m- `!deletechannel <channel>` - Delete a channel[m
+[32m+[m[32m- `!lockchannel [channel]` - Lock a channel[m
+[32m+[m[32m- `!unlockchannel [channel]` - Unlock a channel[m
+[32m+[m
+[32m+[m[32m### Roles[m
+[32m+[m[32m- `!addrole <member> <role>` - Add a role to a member[m
+[32m+[m[32m- `!removerole <member> <role>` - Remove a role from a member[m
+[32m+[m[32m- `!createrole <name>` - Create a new role[m
+[32m+[m[32m- `!deleterole <role>` - Delete a role[m
+[32m+[m
+[32m+[m[32m### Utilities[m
+[32m+[m[32m- `!ping` - Check bot latency[m
+[32m+[m[32m- `!serverinfo` - Display server information[m
+[32m+[m[32m- `!userinfo [member]` - Display user information[m
+[32m+[m
+[32m+[m[32m### Setup[m
+[32m+[m[32m- `!setup` - Start the setup wizard[m
+[32m+[m
+[32m+[m[32m## Permissions[m
+[32m+[m
+[32m+[m[32mThe bot requires the following permissions:[m
+[32m+[m[32m- Manage Channels[m
+[32m+[m[32m- Manage Roles[m
+[32m+[m[32m- Kick Members[m
+[32m+[m[32m- Ban Members[m
+[32m+[m[32m- Manage Messages[m
+[32m+[m[32m- Moderate Members (for timeouts)[m
+[32m+[m[32m- View Channels[m
+[32m+[m[32m- Send Messages[m
+[32m+[m[32m- Embed Links[m
+[32m+[m
+[32m+[m[32m## Database[m
+[32m+[m
+[32m+[m[32mThe bot uses SQLite to store:[m
+[32m+[m[32m- Member warnings[m
+[32m+[m[32m- Moderation logs[m
+[32m+[m[32m- Server configurations[m
+[32m+[m
+[32m+[m[32m## Support[m
+[32m+[m
+[32m+[m[32mFor issues or questions, please open an issue on GitHub.[m
+[32m+[m
+[32m+[m[32m## License[m
+[32m+[m
+[32m+[m[32mMIT License[m
+[1mdiff --git a/bot.py b/bot.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..bf4761e[m
+[1m--- /dev/null[m
+[1m+++ b/bot.py[m
+[36m@@ -0,0 +1,109 @@[m
+[32m+[m[32m"""[m
+[32m+[m[32mDiscord Moderation Bot[m
+[32m+[m[32mMain entry point for the bot[m
+[32m+[m[32m"""[m
+[32m+[m
+[32m+[m[32mimport os[m
+[32m+[m[32mimport asyncio[m
+[32m+[m[32mimport logging[m
+[32m+[m[32mimport yaml[m
+[32m+[m[32mimport discord[m
+[32m+[m[32mfrom discord.ext import commands[m
+[32m+[m[32mfrom dotenv import load_dotenv[m
+[32m+[m
+[32m+[m[32mfrom database.db_manager import DatabaseManager[m
+[32m+[m
+[32m+[m[32mload_dotenv()[m
+[32m+[m
+[32m+[m[32mTOKEN = os.getenv("DISCORD_TOKEN")[m
+[32m+[m[32mif not TOKEN:[m
+[32m+[m[32m    raise RuntimeError("DISCORD_TOKEN not found. Create a .env file in project root.")[m
+[32m+[m
+[32m+[m[32mwith open("config.yaml", "r") as f:[m
+[32m+[m[32m    config = yaml.safe_load(f)[m
+[32m+[m
+[32m+[m[32mBOT_PREFIX = config.get("bot", {}).get("command_prefix", "!")[m
+[32m+[m[32mGUILD_ID = config.get("bot", {}).get("guild_id", None)[m
+[32m+[m[32mGUILD_ID = int(GUILD_ID) if GUILD_ID else None[m
+[32m+[m
+[32m+[m[32mlogging.basicConfig([m
+[32m+[m[32m    level=logging.INFO,[m
+[32m+[m[32m    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"[m
+[32m+[m[32m)[m
+[32m+[m[32mlogger = logging.getLogger("modbot")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass ModBot(commands.Bot):[m
+[32m+[m[32m    def __init__(self):[m
+[32m+[m[32m        intents = discord.Intents.default()[m
+[32m+[m[32m        intents.members = True[m
+[32m+[m[32m        intents.guilds = True[m
+[32m+[m[32m        intents.message_content = True[m
+[32m+[m
+[32m+[m[32m        super().__init__([m
+[32m+[m[32m            command_prefix=BOT_PREFIX,   # allows ! commands IF your cogs use @commands.command[m
+[32m+[m[32m            intents=intents,[m
+[32m+[m[32m            help_command=None[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m        self.config = config[m
+[32m+[m[32m        self.db = DatabaseManager()[m
+[32m+[m
+[32m+[m[32m    async def setup_hook(self):[m
+[32m+[m[32m        await self.db.init_db()[m
+[32m+[m[32m        logger.info("Database initialized")[m
+[32m+[m
+[32m+[m[32m        cogs = [[m
+[32m+[m[32m            "cogs.moderation",[m
+[32m+[m[32m            "cogs.channels",[m
+[32m+[m[32m            "cogs.messages",[m
+[32m+[m[32m            "cogs.roles",[m
+[32m+[m[32m            "cogs.utilities",[m
+[32m+[m[32m            "cogs.setup",[m
+[32m+[m[32m        ][m
+[32m+[m
+[32m+[m[32m        for cog in cogs:[m
+[32m+[m[32m            try:[m
+[32m+[m[32m                await self.load_extension(cog)[m
+[32m+[m[32m                logge

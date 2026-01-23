@@ -1,0 +1,49 @@
+# Bot Configuration
+bot:
+  # Optional prefix for text commands (slash commands are primary)
+  command_prefix: "!"
+  guild_id: 1464175176865419327  # Guild ID for testing (set to null for global)
+
+  # Bot status
+  status: "Moderating servers"
+  activity_type: "watching"  # watching, playing, listening, streaming
+
+# Moderation settings
+moderation:
+  # Default warn threshold before automatic action
+  warn_threshold: 3
+  
+  # Action to take when threshold is reached: timeout, kick, ban, none
+  warn_threshold_action: "timeout"
+  
+  # Timeout duration in minutes when threshold is reached
+  warn_threshold_timeout_duration: 60
+  
+  # Maximum purge amount per command
+  max_purge_amount: 100
+  
+  # Cooldown for destructive commands (seconds)
+  destructive_command_cooldown: 10
+
+# Server-specific settings (configured via /setup commands)
+# These are defaults and will be overridden by database settings
+servers:
+  default:
+    mod_log_channel_id: null
+    allowed_admin_role_ids: []
+    muted_role_id: null
+
+# Logging
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: "INFO"
+  
+  # Log to file
+  file_logging: true
+  log_file: "logs/bot.log"
+  
+  # Max log file size in MB
+  max_log_size: 10
+  
+  # Number of backup log files to keep
+  backup_count: 5
