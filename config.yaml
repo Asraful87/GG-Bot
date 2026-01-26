@@ -25,34 +25,169 @@ moderation:
   # Cooldown for destructive commands (seconds)
   destructive_command_cooldown: 10
 
-# Server-specific settings (configured via /setup commands)
-# These are defaults and will be overridden by database settings
-servers:
-  default:
-    mod_log_channel_id: null
-    allowed_admin_role_ids: []
-    muted_role_id: null
+# AutoMod settings
+automod:
+  enabled: true
+  
+  # What to do when violation detected: delete, warn, timeout
+  action_on_violation: "delete"
+  
+  # Repeat violation action
+  action_on_repeat: "timeout"
+  repeat_timeout_minutes: 10
+  
+  # Mention spam
+  max_mentions: 5
+  
+  # Discord invite links
+  block_discord_invites: true
+  
+  # All links
+  block_links: false
+  
+  # Block links for members with only "Member" role
+  member_role_name: "Member"  # Name of the basic member role
+  
+  # Blocked words/phrases (case-insensitive) - Common Discord spam
+  blocked_words:
+    # Nitro/Gift scams
+    - "free nitro"
+    - "free discord nitro"
+    - "get nitro"
+    - "claim nitro"
+    - "nitro gift"
+    - "discord gift"
+    - "steamnitro"
+    - "discordnitro"
+    - "discord-nitro"
+    - "nitro for free"
+    - "3 months free"
+    - "steam giveaway"
+    
+    # Phishing/Scam links
+    - "discordapp.ru"
+    - "discorde.gift"
+    - "discord.com.ru"
+    - "steamcommunity.ru"
+    - "steamnitro.com"
+    - "discordnitro.com"
+    - "discordgift.com"
+    - "steam-discord"
+    - "disccrd"
+    - "dlscord"
+    - "discörd"
+    
+    # QR Code scams
+    - "scan qr code"
+    - "scan this code"
+    - "steam qr"
+    - "discord qr"
+    
+    # Trading/Money scams
+    - "buying discord accounts"
+    - "selling discord accounts"
+    - "cheap nitro"
+    - "selling nitro"
+    - "trade nitro"
+    - "paypal money free"
+    - "free robux"
+    - "free vbucks"
+    
+    # Server raiding terms
+    - "raid discord"
+    - "join raid"
+    - "mass dm"
+    - "nuke server"
+    - "server nuker"
+    
+    # Common spam phrases
+    - "@everyone free"
+    - "@here free"
+    - "click here to claim"
+    - "limited time offer"
+    - "expires soon"
+    - "claim before"
+    - "dm me for"
+    - "check dm"
+    - "look at dm"
+    
+    # NSFW/18+ spam
+    - "18+ content"
+    - "only fans"
+    - "onlyfans"
+    - "nsfw link"
+    - "xxx"
+    - "porn"
+    
+    # Self-promotion spam
+    - "sub4sub"
+    - "subscribe to my"
+    - "check out my server"
+    - "join my server for"
+    - "follow for follow"
+    - "f4f"
+    - "s4s"
+    
+    # Cryptocurrency scams
+    - "crypto giveaway"
+    - "bitcoin giveaway"
+    - "free bitcoin"
+    - "free eth"
+    - "airdrop"
+    - "wallet verification"
+    
+    # General scam terms
+    - "message me for"
+    - "text me for"
+    - "whatsapp me"
+    - "telegram me"
+    - "verify your account"
+    - "account suspended"
+    - "click to verify"
+    - "urgent action required"
+  
+  # Exempt roles and channels
+  exempt_role_ids: []
+  exempt_channel_ids: []
 
-# Logging
-logging:
-  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
-  level: "INFO"
-  
-  # Log to file
-  file_logging: true
-  log_file: "logs/bot.log"
-  
-  # Max log file size in MB
-  max_log_size: 10
-  
-  # Number of backup log files to keep
-  backup_count: 5
-  
-  verification:
+# Anti-Spam settings
+antispam:
+  enabled: true
+
+  # Rate limit: X messages in Y seconds
+  max_messages: 6
+  per_seconds: 8
+
+  # Duplicate spam
+  duplicate_window_seconds: 12
+  max_duplicates: 3
+
+  # What to do when spam detected: delete, warn, timeout
+  spam_action: "timeout"
+  spam_timeout_minutes: 5
+
+# Anti-Raid settings
+antiraid:
+  enabled: true
+
+  # Join-rate detection
+  join_threshold: 5          # users
+  join_interval_seconds: 10  # seconds
+
+  # Account age check
+  min_account_age_days: 3
+
+  # Actions
+  auto_timeout_minutes: 10
+  slowmode_seconds: 15
+
+# Verification settings
+verification:
   role_name: "Verified"
   panel_title: "✅ Verification"
   panel_description: "Click **Verify** to unlock the server."
 
+# Ticket system settings
 tickets:
   category_name: "🎫 TICKETS"
   support_role_name: "Moderator"
@@ -75,3 +210,26 @@ tickets:
       value: "partner"
       description: "Business / Collab"
       emoji: "🤝"
+
+# Server-specific settings (configured via /setup commands)
+# These are defaults and will be overridden by database settings
+servers:
+  default:
+    mod_log_channel_id: null
+    allowed_admin_role_ids: []
+    muted_role_id: null
+
+# Logging
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: "INFO"
+  
+  # Log to file
+  file_logging: true
+  log_file: "logs/bot.log"
+  
+  # Max log file size in MB
+  max_log_size: 10
+  
+  # Number of backup log files to keep
+  backup_count: 5
