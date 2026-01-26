@@ -47,3 +47,31 @@ logging:
   
   # Number of backup log files to keep
   backup_count: 5
+  
+  verification:
+  role_name: "Verified"
+  panel_title: "✅ Verification"
+  panel_description: "Click **Verify** to unlock the server."
+
+tickets:
+  category_name: "🎫 TICKETS"
+  support_role_name: "Moderator"
+  transcript_channel_name: "mod-log"   # fallback if DB log channel not set
+  one_ticket_per_category_per_user: true
+  ping_staff_on_create: true
+  panel_title: "🎫 Open a Ticket"
+  panel_description: "Choose a category from the dropdown to open a private ticket."
+
+  options:
+    - label: "Support"
+      value: "support"
+      description: "General help"
+      emoji: "🛟"
+    - label: "Report"
+      value: "report"
+      description: "Report a user"
+      emoji: "🚨"
+    - label: "Partnership"
+      value: "partner"
+      description: "Business / Collab"
+      emoji: "🤝"
