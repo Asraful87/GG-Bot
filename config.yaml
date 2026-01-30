@@ -2,7 +2,6 @@
 bot:
   # Optional prefix for text commands (slash commands are primary)
   command_prefix: "!"
-  guild_id: 1464175176865419327  # Guild ID for testing (set to null for global)
 
   # Bot status
   status: "Moderating servers"

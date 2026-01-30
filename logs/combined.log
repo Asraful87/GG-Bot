@@ -1,0 +1,70 @@
+2026-01-30 22:37:19 - modbot - INFO - Database initialized
+2026-01-30 22:37:19 - modbot - INFO - Loaded command: moderation/ban.js
+2026-01-30 22:37:19 - modbot - INFO - Loaded command: moderation/kick.js
+2026-01-30 22:37:19 - modbot - INFO - Loaded command: moderation/warn.js
+2026-01-30 22:37:20 - modbot - INFO - Loaded command: music/play.js
+2026-01-30 22:37:20 - modbot - INFO - Loaded command: music/skip.js
+2026-01-30 22:37:20 - modbot - INFO - Loaded command: music/stop.js
+2026-01-30 22:37:20 - modbot - INFO - Loaded command: utilities/ping.js
+2026-01-30 22:37:20 - modbot - INFO - Loaded command: utilities/serverinfo.js
+2026-01-30 22:37:22 - modbot - INFO - ✅ Guild-synced 8 slash commands to guild 1464175176865419327
+2026-01-30 22:37:22 - modbot - INFO - Logged in as ggBot#5757 (ID: 1464183788287561812)
+2026-01-30 22:37:22 - modbot - INFO - Connected to 1 guild(s)
+2026-01-30 22:43:42 - modbot - INFO - Bot stopped
+2026-01-30 22:44:23 - modbot - INFO - Database initialized
+2026-01-30 22:44:23 - modbot - INFO - Loaded command: moderation/ban.js
+2026-01-30 22:44:23 - modbot - INFO - Loaded command: moderation/kick.js
+2026-01-30 22:44:23 - modbot - INFO - Loaded command: moderation/warn.js
+2026-01-30 22:44:23 - modbot - INFO - Loaded command: music/play.js
+2026-01-30 22:44:23 - modbot - INFO - Loaded command: music/skip.js
+2026-01-30 22:44:23 - modbot - INFO - Loaded command: music/stop.js
+2026-01-30 22:44:23 - modbot - INFO - Loaded command: utilities/ping.js
+2026-01-30 22:44:23 - modbot - INFO - Loaded command: utilities/serverinfo.js
+2026-01-30 22:44:25 - modbot - INFO - ✅ Guild-synced 8 slash commands to guild 1464175176865419327
+2026-01-30 22:44:25 - modbot - INFO - Logged in as ggBot#5757 (ID: 1464183788287561812)
+2026-01-30 22:44:25 - modbot - INFO - Connected to 1 guild(s)
+2026-01-30 22:44:53 - modbot - ERROR - Command error in warn: Interaction has already been acknowledged. {"requestBody":{"files":[],"json":{"type":4,"data":{"tts":false,"enforce_nonce":false,"embeds":[{"color":15548997,"timestamp":"2026-01-30T16:44:52.983Z","title":"❌ Error","description":"Failed to warn member."}],"flags":64}}},"rawError":{"message":"Interaction has already been acknowledged.","code":40060},"code":40060,"status":400,"method":"POST","url":"https://discord.com/api/v10/interactions/1466836565799075895/aW50ZXJhY3Rpb246MTQ2NjgzNjU2NTc5OTA3NTg5NTpaRWRpWUsxWkVhMEkzb1JtQVJEODlHQmVtRDNVU2t3U2hRdXc2OHNocURPMG1Ja2hqQTF6MGxCMWE5NzdxaDN4dHlxRlZ1cU53azl3SlhscXJ0Sjh3S0hZVlNBa1prd0NMYVpQTDdVZ0pLRjJQSFFVa05Md2ZXaVU4RkRhY1dyWg/callback?with_response=false","stack":"DiscordAPIError[40060]: Interaction has already been acknowledged.\n    at handleErrors (D:\\bot\\node_modules\\@discordjs\\rest\\dist\\index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async BurstHandler.runRequest (D:\\bot\\node_modules\\@discordjs\\rest\\dist\\index.js:866:23)\n    at async _REST.request (D:\\bot\\node_modules\\@discordjs\\rest\\dist\\index.js:1307:22)\n    at async ChatInputCommandInteraction.reply (D:\\bot\\node_modules\\discord.js\\src\\structures\\interfaces\\InteractionResponses.js:193:22)\n    at async Object.execute (D:\\bot\\commands\\moderation\\warn.js:65:13)\n    at async ModBot.<anonymous> (D:\\bot\\bot.js:115:9)"}
+2026-01-30 22:44:53 - modbot - ERROR - Failed to send error message for interaction 1466836565799075895
+2026-01-30 22:54:03 - modbot - INFO - Database initialized
+2026-01-30 22:54:03 - modbot - INFO - Loaded command: channels/createchannel.js
+2026-01-30 22:54:03 - modbot - INFO - Loaded command: channels/deletechannel.js
+2026-01-30 22:54:03 - modbot - INFO - Loaded command: channels/lockchannel.js
+2026-01-30 22:54:03 - modbot - INFO - Loaded command: channels/setchannelname.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: channels/setchanneltopic.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: channels/slowmode.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: channels/unlockchannel.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: moderation/ban.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: moderation/clearwarnings.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: moderation/kick.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: moderation/purge.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: moderation/timeout.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: moderation/unban.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: moderation/untimeout.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: moderation/warn.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: moderation/warnings.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: music/leave.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: music/nowplaying.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: music/pause.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: music/play.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: music/queue.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: music/resume.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: music/skip.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: music/stop.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: roles/addrole.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: roles/createrole.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: roles/deleterole.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: roles/removerole.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: roles/rolecolor.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: roles/roleinfo.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: roles/rolemembers.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: utilities/avatar.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: utilities/botinfo.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: utilities/ping.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: utilities/serverinfo.js
+2026-01-30 22:54:04 - modbot - INFO - Loaded command: utilities/userinfo.js
+2026-01-30 22:54:07 - modbot - INFO - ✅ Guild-synced 36 slash commands to guild 1464175176865419327
+2026-01-30 22:54:07 - modbot - INFO - Logged in as ggBot#5757 (ID: 1464183788287561812)
+2026-01-30 22:54:07 - modbot - INFO - Connected to 1 guild(s)
+2026-01-30 22:58:35 - modbot - INFO - Bot stopped
+2026-01-30 22:59:26 - modbot - ERROR - Command error in warn: Interaction has already been acknowledged. {"requestBody":{"files":[],"json":{"type":4,"data":{"tts":false,"enforce_nonce":false,"embeds":[{"color":15548997,"timestamp":"2026-01-30T16:59:25.783Z","title":"❌ Error","description":"Failed to warn member."}],"flags":64}}},"rawError":{"message":"Interaction has already been acknowledged.","code":40060},"code":40060,"status":400,"method":"POST","url":"https://discord.com/api/v10/interactions/1466840227397238918/aW50ZXJhY3Rpb246MTQ2Njg0MDIyNzM5NzIzODkxODpTNjdCbHRxYm8zVzRXQlZ5QldHN1RTbko3WHVGTHdNYXZrNUhhbDdwUXg1NzlaN2FOSk4wTmQzNVRwa2dIR21HUGZIVFc0TDFFR2ZtbnZLaHVZR0twazh1RGF4ZHVYSm91RUZBb2hZSnZkN0JjNWhmMGRaYUdZT2NjZjZ1NGRWcA/callback?with_response=false","stack":"DiscordAPIError[40060]: Interaction has already been acknowledged.\n    at handleErrors (D:\\bot\\node_modules\\@discordjs\\rest\\dist\\index.js:762:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async BurstHandler.runRequest (D:\\bot\\node_modules\\@discordjs\\rest\\dist\\index.js:866:23)\n    at async _REST.request (D:\\bot\\node_modules\\@discordjs\\rest\\dist\\index.js:1307:22)\n    at async ChatInputCommandInteraction.reply (D:\\bot\\node_modules\\discord.js\\src\\structures\\interfaces\\InteractionResponses.js:193:22)\n    at async Object.execute (D:\\bot\\commands\\moderation\\warn.js:65:13)\n    at async ModBot.<anonymous> (D:\\bot\\bot.js:115:9)"}
+2026-01-30 22:59:28 - modbot - ERROR - Failed to send error message for interaction 1466840227397238918
